@@ -1,0 +1,41 @@
+{
+  "testName": "Единицы измерения",
+  "questions": [
+    {"question": "Сколько метров в километре?",
+      "answers": [
+        {"answer": "1", "isRight": "false"},
+        {"answer": "100", "isRight": "false"},
+        {"answer": "1000", "isRight": "true"},
+        {"answer": "10 000", "isRight": "false"},
+        {"answer": "0,001", "isRight": "false"}
+      ]
+    },
+    {"question": "Сколько граммов в килограмме?",
+      "answers": [
+        {"answer": "0,1", "isRight": "false"},
+        {"answer": "10", "isRight": "false"},
+        {"answer": "100", "isRight": "false"},
+        {"answer": "1000", "isRight": "true"},
+        {"answer": "416", "isRight": "false"}
+      ]
+    },
+    {"question": "Сколько секунд в часе?",
+      "answers": [
+        {"answer": "60", "isRight": "false"},
+        {"answer": "180", "isRight": "false"},
+        {"answer": "360", "isRight": "false"},
+        {"answer": "3600", "isRight": "true"},
+        {"answer": "86400", "isRight": "false"}
+      ]
+    },
+    {"question": "Сколько литров в кубометре?",
+      "answers": [
+        {"answer": "1", "isRight": "false"},
+        {"answer": "10", "isRight": "false"},
+        {"answer": "100", "isRight": "false"},
+        {"answer": "1000", "isRight": "true"},
+        {"answer": "10000", "isRight": "false"}
+      ]
+    }
+  ]
+}

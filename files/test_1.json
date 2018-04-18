@@ -1,0 +1,31 @@
+{
+  "testName": "Солнечная система",
+  "questions": [
+    {"question": "Ближайшая к Солнцу планета",
+      "answers": [
+        {"answer": "Земля", "isRight": "false"},
+        {"answer": "Марс", "isRight": "false"},
+        {"answer": "Меркурий", "isRight": "true"},
+        {"answer": "Венера", "isRight": "false"}
+      ]
+    },
+    {"question": "Самая большая планета",
+      "answers": [
+        {"answer": "Земля", "isRight": "false"},
+        {"answer": "Сатурн", "isRight": "false"},
+        {"answer": "Уран", "isRight": "false"},
+        {"answer": "Нептун", "isRight": "false"},
+        {"answer": "Юпитер", "isRight": "true"}
+      ]
+    },
+    {"question": "Планета с кольцами",
+      "answers": [
+        {"answer": "Юпитер", "isRight": "false"},
+        {"answer": "Марс", "isRight": "false"},
+        {"answer": "Плутон", "isRight": "false"},
+        {"answer": "Сатурн", "isRight": "true"},
+        {"answer": "Луна", "isRight": "false"}
+      ]
+    }
+  ]
+}

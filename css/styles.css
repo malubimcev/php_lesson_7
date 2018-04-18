@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-container {
+    width: 800px;
+    height: auto;
+    min-height: 200px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #dddddd;
+}
+
+.form-container {
+    display: block;
+    width: 100%;
+    min-height: 120px;
+    margin: 5px auto;
+    padding: 5px;
+    border: 1px solid gray;
+}
+
+.file-input-form {
+    display: block;
+    width: 400px;
+    height: 2em;
+    margin: 5px auto;
+    padding: 5px;
+    background-color: inherit;
+}
+
+.test-form {
+    display: block;
+    background-color: #eeffee;
+}
+
+.question {
+    display: block;
+    width: 600px;
+    height: 80px;
+    margin: 5px auto;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.question-legend {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #229922;
+}
+
+.test-answer {
+    display: inline-block;
+    width: auto;
+    height: 4em;
+    margin: 5px auto;
+    padding: 5px;
+}
+
+.label {
+    margin: 5px auto;
+    padding: 5px;
+    font-size: 14px;
+    color: black;
+    background-color: inherit;
+}
+
+.button {
+    min-width: 80px;
+    min-height: 30px;
+    text-align: center;
+    background-color: #aaddaa;
+}
+
+.select-button {
+    display: block;
+    min-width: 200px;
+    min-height: 40px;
+    margin: 5px auto;
+}
+
+.result-button {
+    display: block;
+    min-width: 200px;
+    min-height: 40px;
+    margin: 5px auto;
+}
+
+h1 {
+    font-size: 24px;
+    text-decoration: underline;
+    color: #44aa44;
+}
+
+.result {
+    display: block;
+    min-height: 5px;
+    margin: 5px auto;
+    padding: 5px;
+    border: 1px solid green;
+}
+
+.file-list {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 40px;
+    border: 1px solid black;
+}

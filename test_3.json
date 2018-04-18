@@ -1,0 +1,31 @@
+{
+  "testName": "Континенты",
+  "questions": [
+    {"question": "Самый южный континент",
+      "answers": [
+        {"answer": "Африка", "isRight": "false"},
+        {"answer": "Австралия", "isRight": "false"},
+        {"answer": "Антарктида", "isRight": "true"},
+        {"answer": "Южная америка", "isRight": "false"},
+        {"answer": "Новая Зеландия", "isRight": "false"}
+      ]
+    },
+    {"question": "Самый маленький континент",
+      "answers": [
+        {"answer": "Евразия", "isRight": "false"},
+        {"answer": "Австралия", "isRight": "true"},
+        {"answer": "Африка", "isRight": "false"},
+        {"answer": "Гренландия", "isRight": "false"}
+      ]
+    },
+    {"question": "Самый большой континент",
+      "answers": [
+        {"answer": "Антарктида", "isRight": "false"},
+        {"answer": "Южная Америка", "isRight": "false"},
+        {"answer": "Северная Америка", "isRight": "false"},
+        {"answer": "Евразия", "isRight": "true"},
+        {"answer": "Африка", "isRight": "false"}
+      ]
+    }
+  ]
+}
