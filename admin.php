@@ -1,36 +1,23 @@
 <?php
-function writeLog($data)//функция записи в лог для отладки
-{
-    $log = file_get_contents("log.txt");
-    $data = (string)$data;
-    $log .= strftime("%c", time())." >> ".$data.";\r\n";
-    file_put_contents("log.txt", $log);
-}
 
     $maxFileSize = 100*1024; //ограничение размера файла
     $validFileType = ["json"];//разрешенные форматы файлов
     $errorArray = [];//массив для записи ошибок
     $path = 'files/'; //путь для нового файла
-    $fileName='';
-    //$randName = md5(time().mt_rand(0, 9999));// имя нового файла
-    // если есть отправленные файлы
-    writeLog('=start=');//пишем в лог для отладки
+    $fileName = '';
     $result = '';//для вывода результата на страницу
+    // если есть отправленные файлы
     if ($_FILES) {
         // валидация размера файла
         $fileName = $_FILES["user_file"]["name"];
         $fileSize = $_FILES["user_file"]["size"];
         $tmpName = $_FILES["user_file"]["tmp_name"];
-        writeLog("fileName=".$fileName);//пишем в лог для отладки
-        writeLog("fileSize=".$fileSize);//пишем в лог для отладки
-        writeLog("tmpName=".$tmpName);//пишем в лог для отладки
         if ($fileSize > $maxFileSize) {
             $errorArray[] = "Размер файла превышает допустимый!";
         }
         // валидация формата файла
         $info = pathinfo($fileName);
         $format = $info['extension'];
-        writeLog("format=".$format);//пишем в лог для отладки
         if(!in_array($format, $validFileType)) {
             $errorArray[] = "Недопустимый формат файла!";
         }
@@ -39,12 +26,11 @@ function writeLog($data)//функция записи в лог для отла�
             // проверяем загружен ли файл
             if (is_uploaded_file($tmpName)) {
                 // сохраняем файл
-                //move_uploaded_file($tmpName, $path.$randName.".$format");
-                move_uploaded_file($tmpName, $path.$fileName);
-                $result = "файл $fileName сохранен";
-                writeLog($result.': '.$path.$fileName);//пишем в лог для отладки
-                writeLog('=file saved=');//пишем в лог для отладки
-                header('Location: list.php');//редирект на список тестов
+                if (move_uploaded_file($tmpName, $path.$fileName)) {;
+                    $result = "файл $fileName сохранен";
+                    header('Location: list.php');//редирект на список тестов
+                    die();
+                }
             } else {
                 // Если файл не загрузился
                 $errorArray[] = 'Ошибка загрузки!';
@@ -53,7 +39,7 @@ function writeLog($data)//функция записи в лог для отла�
             $result = 'Ошибки:<br>'.implode(';', $errorArray);
         }
     } else {
-        writeLog('no file');
+        $errorArray[] = 'no file';
     }
 ?>
 <!DOCTYPE html>

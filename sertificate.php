@@ -18,4 +18,3 @@
     imagestring($img, 3, 120, 160,  '==========', $text_color);
     imagepng($img);
     imagedestroy($img);
-?>
