@@ -26,8 +26,7 @@
             // проверяем загружен ли файл
             if (is_uploaded_file($tmpName)) {
                 // сохраняем файл
-                if (move_uploaded_file($tmpName, $path.$fileName)) {;
-                    $result = "файл $fileName сохранен";
+                if (move_uploaded_file($tmpName, $path.$fileName)) {
                     header('Location: list.php');//редирект на список тестов
                     die();
                 }
